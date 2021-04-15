@@ -1,8 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const authRoutes = require("./routes/authRoutes");
 const { PASSWORD } = require("../mongoDBCredentials/credentials");
 
 const app = express();
+
+app.use(authRoutes);
 
 const credentials = require("../mongoDBCredentials/credentials");
 
@@ -17,10 +20,6 @@ mongoose.connection.on("connected", () => {
 });
 mongoose.connection.on("error", (err) => {
     console.error("Error connecting to mongo", err);
-});
-
-app.get("/", (req, res) => {
-    res.send("Hi there!");
 });
 
 app.listen(3000, () => {
