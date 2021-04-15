@@ -1,6 +1,6 @@
-## Express Skeleton
+## Express Server for Track App
 
-A skeleton for an express server
+A Server for a path tracking app using the node express framework.
 
 ---
 
