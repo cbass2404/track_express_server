@@ -64,7 +64,7 @@ CRUD    ROUTE     Auth?     OBJECT?     USE
 -----------------------------------------------------------------
 GET     /           X       N/A         Test use only
 
-GET     /tracks     X       N/A        Get all track routes
+GET     /tracks     X       N/A         Get all track routes
 
 POST    /signup             REQUIRED    Create new account
 
