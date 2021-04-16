@@ -54,3 +54,48 @@ module.exports = {
     "dev": "nodemon src/index.js"
   }
 ```
+
+## Routes
+
+---
+
+```json
+CRUD    ROUTE     Auth?     OBJECT?     USE
+-----------------------------------------------------------------
+GET     /           X       N/A         Test use only
+
+GET     /tracks     X       N/A        Get all track routes
+
+POST    /signup             REQUIRED    Create new account
+
+{
+    "email": "test@test.com",
+    "password": "123456"
+}
+
+POST    /signin             REQUIRED    Login to existing account
+
+{
+    "email": "test@test.com",
+    "password": "123456"
+}
+
+POST    /tracks     X       REQUIRED    Post new track route
+
+{
+    "name": "My new track",
+    "locations": [
+        {
+            "timestamp": 100000000,
+            "coords": {
+                "lattitude": 100,
+                "longitude": 100,
+                "altitude": 100,
+                "accuracy": 100,
+                "heading": 100,
+                "speed": 100
+            }
+        }
+    ]
+}
+```
